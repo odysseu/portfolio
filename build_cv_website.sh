@@ -23,26 +23,26 @@ echo "=== Building CV Website ==="
 # Step 1: Compile LaTeX files to PDF (if source files exist)
 echo "1. Compiling LaTeX files..."
 
-if [ -f "cv.tex" ]; then
-    echo "  - Compiling cv.tex..."
+if [ -f "cv_english.tex" ]; then
+    echo "  - Compiling cv_english.tex..."
     echo "    Running pdflatex (first pass)..."
-    if pdflatex -interaction=nonstopmode cv.tex; then
+    if pdflatex -interaction=nonstopmode cv_english.tex; then
         echo "    Running pdflatex (second pass for references)..."
-        if pdflatex -interaction=nonstopmode cv.tex; then
-            echo "  ✓ cv.pdf generated successfully"
+        if pdflatex -interaction=nonstopmode cv_english.tex; then
+            echo "  ✓ cv_english.pdf generated successfully"
         else
-            echo "  ⚠ cv.tex second pass failed, but first pass succeeded"
+            echo "  ⚠ cv_english.tex second pass failed, but first pass succeeded"
         fi
     else
-        echo "  ✗ cv.tex compilation failed"
-        if [ -f "cv.pdf" ]; then
-            echo "  ℹ Using existing cv.pdf file"
+        echo "  ✗ cv_english.tex compilation failed"
+        if [ -f "cv_english.pdf" ]; then
+            echo "  ℹ Using existing cv_english.pdf file"
         else
-            echo "  ⚠ No cv.pdf available"
+            echo "  ⚠ No cv_english.pdf available"
         fi
     fi
 else
-    echo "  ⚠ cv.tex not found, using existing cv.pdf if available"
+    echo "  ⚠ cv_english.tex not found, using existing cv_english.pdf if available"
 fi
 
 if [ -f "cv_french.tex" ]; then
@@ -84,7 +84,7 @@ cat > index.html << 'EOF'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugo Jarkoff - CV Download</title>
+    <title>Ulysse Boucherie - CV Download</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
@@ -176,11 +176,11 @@ cat > index.html << 'EOF'
             const link = document.createElement('a');
             
             if (language === 'english') {
-                link.href = 'cv.pdf';
-                link.download = 'Hugo_Jarkoff_CV_English.pdf';
+                link.href = 'cv_english.pdf';
+                link.download = 'Ulysse_Boucherie_CV_English.pdf';
             } else {
                 link.href = 'cv_french.pdf';
-                link.download = 'Hugo_Jarkoff_CV_French.pdf';
+                link.download = 'Ulysse_Boucherie_CV_French.pdf';
             }
             
             document.body.appendChild(link);

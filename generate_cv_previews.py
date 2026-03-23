@@ -46,7 +46,7 @@ def main():
     print("=== Creating CV Previews ===")
     
     # Create previews for both CVs
-    create_pdf_preview_gs('cv.pdf', 'english_cv_preview.png')
+    create_pdf_preview_gs('cv_english.pdf', 'english_cv_preview.png')
     create_pdf_preview_gs('cv_french.pdf', 'french_cv_preview.png')
     
     print("=== Preview Generation Complete ===")
