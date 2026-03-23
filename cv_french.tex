@@ -1,0 +1,248 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks,pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{eurosym}
+\usepackage{xcolor}
+\usepackage{xfrac}
+\usepackage{vwcol} 
+\usepackage{adjustbox}
+\definecolor{myBlue}{rgb}{0,0,0.55}
+
+
+\hypersetup{
+    urlcolor = {[rgb]{0,0,0}}
+}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{geometry}
+\geometry{top=0.3cm, bottom=0.5cm, left=0.4cm, right=0.4cm}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2\vspace{-0.8pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1.15pt}
+  \small
+  \item
+    \begin{tabular*}{0.97\textwidth}{l @{\extracolsep{\fill}}r}
+      \normalsize{\textbf{#1}}   & #2 \\
+      \small{#3} & #4 \\
+    \end{tabular*}
+  \vspace{1.5pt}
+}
+
+\def\Plus{\texttt{+}}
+
+% -------- ORIGINAL ------------
+
+\newcommand{\resumeSubItem}[2]{
+    \small{\resumeItem{#1}{#2}\vspace{-4pt}}
+	}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+
+\newcommand{\resumeProjectListStart}{\begin{minipage}{0.97\textwidth} 
+                                     \begin{itemize}[leftmargin=5mm]
+                                     \vspace{3pt}}
+\newcommand{\resumeProjectListEnd}{\end{itemize} 
+                                   \end{minipage}}
+\newcommand{\resumeProjectItem}[1]{
+    \item\small{#1}
+    }
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%----------HEADING-----------------
+\begin{center}
+  \begin{minipage}{0.97\textwidth}
+      \begin{minipage}[c]{0.6\linewidth}
+          \huge \textbf{Ulysse \textsc{Boucherie}}
+          \\
+          \emph{\large{DevOps Engineer \& Data Scientist (MSc.)}}
+      \end{minipage}
+      \hfill
+      \begin{minipage}[c]{0.215\linewidth}
+          \begin{tabular*}{\textwidth}{c@{\extracolsep{\fill}} l}
+              \href{mailto:uboucherie1@gmail.com}{\raisebox{-0.055\height}{\faEnvelope}} & \href{mailto:uboucherie1@gmail.com}{\small{hugo.jarkoff@gmail.com}} \\
+              \href{https://github.com/odysseu}{\raisebox{-0.035\height}{\faGlobe}} & \href{https://odysseu.github.io/}{\small{odysseu.github.io}} \\
+              \href{https://github.com/odysseu}{\raisebox{-0.035\height}{\faGithub}} & \href{https://github.com/odysseu}{\small{odysseu}} \\
+              \href{https://www.linkedin.com/in/ulysse-boucherie-7a3b2b111/}{\raisebox{-0.0925\height}{\faLinkedinSquare}} & \href{https://www.linkedin.com/in/ulysse-boucherie-7a3b2b111/}{\small{in/ulysse.boucherie}} \\
+              {\raisebox{-0.0925\height}{\faHome}} & \small{Fontainebleau, France}
+          \end{tabular*}
+      \end{minipage}
+  \end{minipage}
+  \end{center}
+
+
+%------------PROJET-----------------------
+
+\begin{center}
+\begin{minipage}{0.95\textwidth}
+    \centering
+    \large \textbf{DevOps and data engineer upgrading public sector's processes}
+\end{minipage}
+\end{center}
+
+\vspace{-5mm}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+\vspace{0.75mm}
+
+
+\resumeSubheading{Ministère de la sécurité intérieur}{Paris, France}{Data Scientist}{2024 - aujourd'hui}
+
+Responsable des publications sur la délinquance économique et financière
+\resumeProjectListStart
+\resumeProjectItem{Refonte des processus ETL de l'équipe, permettant de réduire de plus de 80\% le délai entre l'acquisition des données et la mise en production.}
+\resumeProjectItem{Mise en place d'une culture du changement avec des outils et méthodes de travail plus modernes à un public hétérogène en adaptabilité, technicité et ambition.}
+\resumeProjectItem{Développement d'outils internes puis open source pour la publication industrialisée d'articles et de contenus ouverts au grand public.}
+\resumeProjectItem{Co-design, développement et mise en production de modèle LLM pour clusteriser les réponses d'enquête à champs libres.}
+\resumeProjectListEnd
+
+\resumeSubheading{INSEE}{Nantes, France}{Ingénieur DevOps}{2020 - 2024}
+
+Développement et support de la plateforme de datascience de l'INSEE
+\resumeProjectListStart
+\resumeProjectItem{Co-développement et installation de la plateforme as a service (\href{https://github.com/InseeFrLab/onyxia}{Onyxia})}
+\resumeProjectItem{Développement et intégration continus de toute la stack technique (Images docker, chart Helm, Pipelines gitlab et github, )}
+\resumeProjectItem{Support de proximité aux datascientist débutants jusau'aux avancés pour l'intégration de leur services (notebooks, applications internes de dataviz, IDE data : Rstudio \& Pycharm).}
+\resumeProjectListEnd
+
+\resumeSubheading{Invoxia}{Paris, France}{R\&D Machine Learning Engineer}{2021 -- 2024}
+
+Led multiple end-to-end ML projects from research to deployment:
+\resumeProjectListStart
+\resumeProjectItem{Designed a CV-based signal processing model to estimate canine respiratory rate from accelerometer data; achieved 98.5\% accuracy (\href{https://www.biorxiv.org/content/10.1101/2023.06.09.544347v1}{preprint available}).}
+\resumeProjectItem{Researched and adapted neural architectures (CNNs, Vision Transformers), focusing on model compression for embedded deployment.}
+\resumeProjectItem{Deployed ML models to 10k\Plus \ production devices via Kubernetes and AWS SageMaker, with real-time monitoring (Grafana, Prometheus).}
+\resumeProjectListEnd
+
+% \resumeSubheading{Institut Louis Bachelier}{Paris, France}{End-of-Studies Internship}{2020 (6 months)}
+% \resumeProjectListStart
+% \resumeProjectItem{Researched online learning methods for training recurrent neural networks.}
+% \resumeProjectListEnd
+
+\resumeSubheading{Sopra Steria (for NavBlue - Airbus)}{Toulouse, France}{End-of-Studies Team Project}{2019 -- 2020}
+\resumeProjectListStart
+\resumeProjectItem{Developed an airport image segmentation and classification system using fully convolutional neural networks (UNet).}
+\resumeProjectListEnd
+
+% \resumeSubheading{Safran Aircraft Engines}{Villaroche, France}{Engineering Internship in Aero-Mechanical Optimization}{2018 (6 months)}
+% \resumeProjectListStart
+% \resumeProjectItem{Development of a new method for parameterizing engine blades based on a Bézier surfaces representation. Development and implementation of Python scripts for aero-mechanical optimization workflows.}
+% \resumeProjectListEnd
+
+\resumeSubHeadingListEnd
+
+
+\vspace{-5mm}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\vspace{0.75mm}
+
+
+\resumeSubheading{ISAE-SUPAERO}{Toulouse, France}{Engineering Degree (MSc.)}{2016 -- 2020}
+\resumeProjectListStart
+\resumeProjectItem{\textit{Major in Machine Learning}: Deep Learning (Computer Vision, NLP), RL, MLOps.}
+\resumeProjectItem{\textit{Minor in Advanced Mathematics}: Bayesian statistics, HPC, optimization.}
+\resumeProjectListEnd
+
+\resumeSubheading{Lycée Louis-le-Grand}{Paris, France}{Preparatory Classes}{2014 -- 2016}
+\resumeProjectListStart
+\resumeProjectItem{\textit{PCSI - PC*}: Mathematics - Physics - Chemistry - Computer Science.}
+\resumeProjectListEnd
+
+\resumeSubHeadingListEnd
+
+
+\vspace{-4mm}
+
+%-----------COMPETENCES TECHNIQUES + LANGUES -----------------
+\begin{minipage}[t]{0.65\linewidth}
+    \section{Technical Skills}
+    \resumeSubHeadingListStart
+    \resumeSubItem{Programming}{Python (advanced, async APIs, design patterns), Bash; working knowledge of C, Java.}
+    \resumeSubItem{Deep Learning}{PyTorch, TensorFlow, Keras.}
+    \resumeSubItem{MLOps \& Infrastructure}{Docker, Kubernetes, Terraform, NVIDIA Triton, PyTriton, CI/CD (GitLab), experiment tracking (WandB, ClearML).}
+    \resumeSubItem{Databases}{PostgreSQL, PostGIS.}
+    \resumeSubItem{Cloud Platforms}{Google Cloud Platform (GCP), Amazon Web Services (AWS).}
+    \resumeSubHeadingListEnd
+    \end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+    \section{Languages}
+    \resumeSubHeadingListStart
+    \resumeSubItem{French}{Native language.}
+    \resumeSubItem{English}{Full professional proficiency. \\ \emph{TOEFL ITP}: 633/677.}
+    \resumeSubHeadingListEnd
+\end{minipage}
+
+
+% \vspace{0.5mm}
+
+%-----------PROJECTS-----------------
+\section{Personal Projects and Diverse Interests}
+\vspace{0.5mm}
+\begin{minipage}[t]{0.9865\textwidth}
+\resumeSubHeadingListStart
+  \resumeSubItem{Language Models Training}{RapGPT: Trained a Transformer-based language model from scratch (architecture, training loop, and deployment) to generate French rap lyrics; deployed live demos on \href{https://huggingface.co/spaces/hugojarkoff/rapGPT}{Hugging Face} (with open weights).}
+  \resumeSubItem{Rock Climbing / Mountaineering}{Experienced climber and mountaineer (over 20 years of practice). Designed and built a custom finger-force measurement device (ESP32 soldered with deformation gauge, embedded with C software).}
+\resumeSubHeadingListEnd
+\end{minipage}
+
+
+%-------------------------------------------
+\end{document}
