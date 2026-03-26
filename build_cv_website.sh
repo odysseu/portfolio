@@ -196,7 +196,7 @@ echo "  ✓ index.html created"
 
 echo "=== Build Complete ==="
 echo "Generated files:"
-for file in cv.pdf cv_french.pdf english_cv_preview.png french_cv_preview.png index.html; do
+for file in cv_english.pdf cv_french.pdf english_cv_preview.png french_cv_preview.png index.html; do
     if [ -f "$file" ]; then
         size=$(du -h "$file" | cut -f1)
         echo "  ✓ $file ($size)"
