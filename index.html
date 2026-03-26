@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulysse Boucherie</title>
+    <meta name="description" content="Download Ulysse Boucherie's CV in English or French. Professional profile and resume.">
+    <title>Ulysse Boucherie | Download CV</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://odysseu.github.io/">
+    <meta property="og:title" content="Ulysse Boucherie | Download CV">
+    <meta property="og:description" content="Download Ulysse Boucherie's CV in English or French. Professional profile and resume.">
+    <meta property="og:image" content="https://odysseu.github.io/images/circle_profile.png">
+
+    <!-- Twitter Card (sans compte Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ulysse Boucherie | Download CV">
+    <meta name="twitter:description" content="Download Ulysse Boucherie's CV in English or French. Professional profile and resume.">
+    <meta name="twitter:image" content="https://odysseu.github.io/images/circle_profile.png">
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -90,15 +105,15 @@
 </head>
 <body>
     <div class="container">
-        <img src="circle_profile.png" alt="Profile Picture" class="profile-picture">
+        <img src="circle_profile.png" alt="Profile Picture of Ulysse Boucherie" class="profile-picture">
         <h1>Download My CV</h1>
         <div class="cv-options">
             <div class="cv-option" onclick="downloadCV('english')">
-                <img src="english_cv_preview.png" alt="English CV Preview">
+                <img src="english_cv_preview.png" alt="Preview of English CV">
                 <p>English Version</p>
             </div>
             <div class="cv-option" onclick="downloadCV('french')">
-                <img src="french_cv_preview.png" alt="French CV Preview">
+                <img src="french_cv_preview.png" alt="Preview of French CV">
                 <p>French Version</p>
             </div>
         </div>
@@ -106,11 +121,11 @@
             <p>Click on the preview images above to download the respective CV version in .pdf</p>
         </div>
     </div>
-    
+
     <script>
         function downloadCV(language) {
             const link = document.createElement('a');
-            
+
             if (language === 'english') {
                 link.href = 'cv_english.pdf';
                 link.download = 'Ulysse_Boucherie_CV_English.pdf';
@@ -118,7 +133,7 @@
                 link.href = 'cv_french.pdf';
                 link.download = 'Ulysse_Boucherie_CV_French.pdf';
             }
-            
+
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
